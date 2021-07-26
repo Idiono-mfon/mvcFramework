@@ -1,0 +1,8 @@
+#For every requested which exist in the public folder, append public to the url and re-route to that url
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+RewriteRule ^$ public/ [L]
+RewriteRule (.*) public/$1 [L]
+
+</IfModule>
